@@ -11,12 +11,11 @@ import Logout from "./Logout";
 import Navbar from "./Navbar";
 function App() {
 
-  const [login, setLogin] = React.useState(false);
+  const [login, setLogin] = React.useState(localStorage.getItem('login'));
 
   const checkLogin =()=>{
     let login = localStorage.getItem('login');
     setLogin(login);
-
   }
 
   return (
