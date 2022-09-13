@@ -1,14 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
+import ProtectedRoutes from "./ProtectedRoutes";
 import Home from "./Home";
 import Signup from "./Signup";
 import About from './About';
 import Contact from './Contact';
 import Login from './Login';
-import './Nav.css';
-import ProtectedRoutes from "./ProtectedRoutes";
 import Logout from "./Logout";
 import Navbar from "./Navbar";
+import Users from "./Users";
+import './Nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
 
           <Route  element={<ProtectedRoutes />} >
             <Route path="/contact" element={<Contact/>} />
+            <Route path="/users" element={<Users/>} />
             <Route path="/logout" element={<Logout checkLogout={checkLogin}/>} />
           </Route>
 
