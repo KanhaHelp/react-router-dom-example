@@ -1,12 +1,13 @@
 import { React, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login(props) {
 
   const navigate = useNavigate();
 
   const login = () => {
     localStorage.setItem('login', true);
+    props.checkLogin();
     navigate('/');
   }
 
@@ -26,7 +27,6 @@ function Login() {
           <button onClick={login}>Login</button>
         </div>
       </div>
-
     </>
   )
 }

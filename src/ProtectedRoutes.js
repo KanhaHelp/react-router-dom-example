@@ -1,9 +1,9 @@
 import { React, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Outlet} from 'react-router-dom';
 
-function ProtectedRoutes(props) {
+function ProtectedRoutes() {
 
-    const { Component } = props;
+    // const { Component } = props;
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function ProtectedRoutes(props) {
     });
 
     return (
-        <Component />
+        <Outlet />
     )
 }
 

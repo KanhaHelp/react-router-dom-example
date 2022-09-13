@@ -1,7 +1,7 @@
 import { React, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function Logout() {
+function Logout(props) {
 
     const navigate = useNavigate();
 
@@ -10,6 +10,7 @@ function Logout() {
         console.log('isLogin' , isLogin);
         if (isLogin) {
             localStorage.removeItem('login');
+            props.checkLogout();
             navigate('/');
         }
     });
