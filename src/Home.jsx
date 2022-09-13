@@ -1,11 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Link } from "react-router-dom";
 import './App.css';
+import './Nav.css';
 
 function Home() {
     return (
         <div className="App">
+            <nav>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li style={{float:"right"}}><Link className="active" to="about">Signup</Link></li>
+                    <li style={{float:"right"}}><Link to="about">Login</Link></li>
+                </ul>
+            </nav>
             <header className="App-header">
+
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
