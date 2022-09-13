@@ -9,6 +9,7 @@ import './Nav.css';
 import ProtectedRoutes from "./ProtectedRoutes";
 import Logout from "./Logout";
 import Navbar from "./Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   const [login, setLogin] = React.useState(localStorage.getItem('login'));

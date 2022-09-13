@@ -24,7 +24,7 @@ function Login(props) {
         <div style={{ display: 'block' }}>
           <input type="text" name="" id="" /> <br />
           <input type="text" name="" id="" /> <br />
-          <button onClick={login}>Login</button>
+          <button className="btn btn-success mt-4" onClick={login}>Login</button>
         </div>
       </div>
     </>
